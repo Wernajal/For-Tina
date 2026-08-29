@@ -1,1 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080012;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 20% 20%, #6d147c55, transparent 30%),
+        radial-gradient(circle at 80% 70%, #b0006f44, transparent 30%),
+        linear-gradient(135deg, #080012, #190020, #050008);
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: .2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ================= START ================= */
+
+.start {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+.start-content {
+    animation: fadeUp 1.5s ease;
+}
+
+.small-text {
+    opacity: .65;
+    letter-spacing: 3px;
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+.start h1 {
+    font-size: clamp(42px, 12vw, 80px);
+    margin-bottom: 12px;
+}
+
+.start p {
+    opacity: .7;
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.open-btn {
+    border: none;
+
+    padding: 16px 32px;
+
+    border-radius: 40px;
+
+    background: white;
+    color: #6d176f;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.open-btn:hover {
+    transform: scale(1.06);
+}
+
+
+/* ================= MAIN ================= */
+
+.main {
+    display: none;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    animation: fadeUp 1s ease;
+}
+
+
+/* ================= TITLE ================= */
+
+.title {
+    margin-bottom: 50px;
+}
+
+.title .tiny {
+    opacity: .55;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+}
+
+.title h2 {
+    margin-top: 15px;
+
+    font-size: clamp(40px, 10vw, 65px);
+}
+
+.title span {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    font-size: 24px;
+}
+
+
+/* ================= LETTER ================= */
+
+.letter {
+    background: #ffffff0d;
+
+    border: 1px solid #ffffff18;
+
+    border-radius: 25px;
+
+    padding: 30px 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 20px 60px #00000055;
+
+    text-align: left;
+}
+
+.letter p {
+    color: #eee4f1;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.highlight {
+    text-align: center;
+
+    font-size: 20px !important;
+
+    color: white !important;
+
+    font-weight: bold;
+}
+
+
+/* ================= TYPING ================= */
+
+.typing {
+    min-height: 80px;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #f5dff7;
+}
+
+.cursor {
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    margin-top: 70px;
+}
+
+.section h3 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= APPRECIATION ================= */
+
+.cards {
+    display: grid;
+
+    gap: 15px;
+}
+
+.mini-card {
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: #ffffff09;
+
+    border: 1px solid #ffffff12;
+
+    transition: .3s;
+
+    text-align: left;
+}
+
+.mini-card:hover {
+    transform: translateY(-4px);
+
+    background: #ffffff12;
+}
+
+.mini-card strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 18px;
+}
+
+.mini-card p {
+    color: #cfc2d2;
+
+    line-height: 1.6;
+}
+
+
+/* ================= MOMENTS ================= */
+
+.timeline {
+    position: relative;
+
+    text-align: left;
+}
+
+.moment {
+    display: flex;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: #ffffff09;
+
+    border: 1px solid #ffffff12;
+
+    transition: .3s;
+}
+
+.moment:hover {
+    transform: translateY(-4px);
+
+    background: #ffffff12;
+}
+
+.moment-icon {
+    min-width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #ffffff12;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+}
+
+.moment-content span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .5;
+}
+
+.moment-content h4 {
+    font-size: 20px;
+
+    margin: 7px 0 10px;
+}
+
+.moment-content p {
+    color: #cfc2d2;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* ================= REMINDER ================= */
+
+.memory {
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background: #ffffff09;
+
+    border: 1px solid #ffffff12;
+}
+
+.memory p {
+    color: #e9ddeb;
+
+    line-height: 1.8;
+}
+
+
+/* ================= SECRET ================= */
+
+.secret {
+    margin-top: 70px;
+}
+
+.secret button {
+    padding: 14px 25px;
+
+    border: 1px solid #ffffff25;
+
+    background: #ffffff0d;
+
+    color: white;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.secret-message {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #ffffff0b;
+
+    border: 1px solid #ffffff18;
+
+    line-height: 1.8;
+
+    animation: fadeUp 1s ease;
+}
+
+
+/* ================= FINAL ================= */
+
+.final {
+    margin-top: 80px;
+
+    padding-bottom: 40px;
+}
+
+.final-heart {
+    font-size: 45px;
+}
+
+.final p {
+    margin-top: 20px;
+
+    color: #bfb1c2;
+
+    line-height: 1.7;
+}
+
+.signature {
+    margin-top: 25px;
+
+    font-style: italic;
+
+    color: #e6d5e8;
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.floating-heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    animation: floatHeart linear forwards;
+
+    z-index: 20;
+}
+
+@keyframes floatHeart {
+
+    from {
+        transform: translateY(0) scale(.7);
+
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) scale(1.4);
+
+        opacity: 0;
+    }
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .main {
+        padding: 55px 15px;
+    }
+
+    .letter {
+        padding: 25px 18px;
+    }
+
+    .letter p {
+        font-size: 16px;
+    }
+
+    .moment {
+        padding: 18px;
+    }
+
+    .moment-content h4 {
+        font-size: 18px;
+    }
+
+  }
