@@ -1,344 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Tina ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <title>For Tina ❤️</title>
 
-body {
-    min-height: 100vh;
-    font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #12001f, #26003d, #090014);
-    color: white;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-}
-
-.star {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 2s infinite alternate;
-}
-
-@keyframes twinkle {
-    from { opacity: .2; transform: scale(.7); }
-    to { opacity: 1; transform: scale(1.3); }
-}
-
-.container {
-    width: 92%;
-    max-width: 650px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    padding: 30px 0;
-}
-
-.intro {
-    animation: fadeIn 1.5s ease;
-}
-
-.intro h1 {
-    font-size: clamp(38px, 10vw, 70px);
-    margin-bottom: 15px;
-}
-
-.intro p {
-    font-size: 18px;
-    opacity: .8;
-    margin-bottom: 30px;
-}
-
-button {
-    border: none;
-    padding: 14px 28px;
-    border-radius: 30px;
-    background: white;
-    color: #6b087e;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s;
-    box-shadow: 0 8px 30px rgba(255,255,255,.15);
-}
-
-button:hover {
-    transform: translateY(-3px) scale(1.03);
-}
-
-.card {
-    display: none;
-    background: rgba(255,255,255,.09);
-    border: 1px solid rgba(255,255,255,.15);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    padding: 35px 25px;
-    box-shadow: 0 20px 70px rgba(0,0,0,.35);
-    animation: cardIn 1s ease;
-}
-
-.card h2 {
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.message {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #f4eafa;
-}
-
-.divider {
-    width: 70px;
-    height: 3px;
-    background: white;
-    margin: 25px auto;
-    border-radius: 10px;
-    opacity: .5;
-}
-
-.appreciation {
-    margin-top: 30px;
-    text-align: left;
-}
-
-.appreciation h3 {
-    text-align: center;
-    margin-bottom: 18px;
-}
-
-.appreciation div {
-    background: rgba(255,255,255,.07);
-    padding: 14px;
-    border-radius: 15px;
-    margin: 10px 0;
-}
-
-.hidden-message {
-    display: none;
-    margin-top: 25px;
-    padding: 20px;
-    border-radius: 18px;
-    background: rgba(255,255,255,.08);
-    line-height: 1.7;
-    animation: fadeIn 1s ease;
-}
-
-.heart {
-    position: fixed;
-    font-size: 20px;
-    pointer-events: none;
-    animation: floatUp 4s linear forwards;
-    z-index: 10;
-}
-
-@keyframes floatUp {
-    0% {
-        transform: translateY(0) scale(.7);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100vh) scale(1.4);
-        opacity: 0;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes cardIn {
-    from {
-        opacity: 0;
-        transform: scale(.9) translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-.signature {
-    margin-top: 30px;
-    font-style: italic;
-    opacity: .75;
-}
-
-.footer {
-    margin-top: 25px;
-    font-size: 12px;
-    opacity: .4;
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="stars" id="stars"></div>
+    <!-- Background -->
+    <div class="background"></div>
+    <div class="stars" id="stars"></div>
 
-<div class="container">
+    <!-- Opening screen -->
+    <section class="start" id="start">
 
-    <div class="intro" id="intro">
-        <h1>Hey Tina ✨</h1>
-        <p>I made something small for you...</p>
-        <button onclick="openCard()">Open it 💌</button>
-    </div>
+        <div class="start-content">
 
-    <div class="card" id="card">
+            <div class="small-text">
+                THIS IS FOR ONE PERSON
+            </div>
 
-        <h2>For Tina ❤️</h2>
+            <h1>Tina ❤️</h1>
 
-        <div class="divider"></div>
+            <p>
+                I made a little corner of the internet for you.
+            </p>
 
-        <p class="message">
-            I don't really know how to put everything into words,
-            but I wanted to make you something you could come back to
-            whenever you felt like it.
-            <br><br>
-
-            You're one of those people who somehow make ordinary
-            conversations feel a little more special.
-            Your kindness, your energy, your little jokes...
-            they're things I genuinely appreciate.
-            <br><br>
-
-            So whenever you open this page, just remember one thing:
-            <br><br>
-
-            <strong>You are appreciated more than you probably realize. ❤️</strong>
-        </p>
-
-        <div class="appreciation">
-
-            <h3>A few things I appreciate about you 🌷</h3>
-
-            <div>✨ The way you make conversations interesting.</div>
-
-            <div>😂 Your ability to make me laugh over the smallest things.</div>
-
-            <div>🫶 The kindness you show without making a big deal about it.</div>
-
-            <div>🌙 And honestly... just being you.</div>
+            <button class="open-btn" onclick="openLetter()">
+                Open it ✨
+            </button>
 
         </div>
 
-        <button onclick="showSecret()" style="margin-top:25px;">
-            One more thing 👀
-        </button>
+    </section>
 
-        <div class="hidden-message" id="secret">
-            If you ever have a bad day, come back here.
-            <br><br>
-            No complicated explanation needed.
-            Just take a breath, smile a little,
-            and remember that somewhere out there,
-            someone thinks you're pretty amazing. ❤️
+
+    <!-- Main card -->
+    <main class="main" id="main">
+
+        <div class="title">
+
+            <div class="tiny">
+                A LITTLE SOMETHING FOR
+            </div>
+
+            <h2>Tina</h2>
+
+            <span>🤍</span>
+
         </div>
 
-        <div class="signature">
-            — From someone who is glad he met you 🤍
-        </div>
 
-        <div class="footer">
-            Made especially for Tina • Keep this little page forever ✨
-        </div>
+        <!-- Letter -->
+        <section class="letter">
 
-    </div>
-</div>
+            <div class="typing" id="typing"></div>
 
-<script>
+            <p>
+                I could have just sent you a normal message...
+                but where's the fun in that? 😂
+            </p>
 
-/* Create stars */
-const stars = document.getElementById("stars");
+            <p>
+                So instead, I made you a tiny place on the internet
+                that you can come back to whenever you feel like it.
+            </p>
 
-for (let i = 0; i < 100; i++) {
-    const star = document.createElement("div");
-    star.className = "star";
+            <p>
+                I don't always say everything that's on my mind,
+                but I hope you know that I genuinely appreciate
+                having you in my life.
+            </p>
 
-    star.style.left = Math.random() * 100 + "%";
-    star.style.top = Math.random() * 100 + "%";
-    star.style.animationDelay = Math.random() * 2 + "s";
+            <p>
+                You're funny, kind, interesting, and somehow you make
+                even the most random conversations memorable.
+            </p>
 
-    stars.appendChild(star);
-}
+            <p class="highlight">
+                Basically... I'm glad I met you. ❤️
+            </p>
 
-
-/* Open card */
-function openCard() {
-
-    document.getElementById("intro").style.display = "none";
-    document.getElementById("card").style.display = "block";
-
-    createHearts();
-}
+        </section>
 
 
-/* Secret message */
-function showSecret() {
+        <!-- Things I appreciate -->
+        <section class="section">
 
-    const secret = document.getElementById("secret");
+            <h3>Things I appreciate about you 🌷</h3>
 
-    secret.style.display = "block";
+            <div class="cards">
 
-    createHearts();
+                <div class="mini-card">
+                    <strong>😂 Your humor</strong>
 
-    setTimeout(() => {
-        secret.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
-    }, 200);
-}
+                    <p>
+                        Somehow the smallest conversations can turn
+                        into something hilarious.
+                    </p>
+                </div>
 
 
-/* Floating hearts */
-function createHearts() {
+                <div class="mini-card">
+                    <strong>🫶 Your kindness</strong>
 
-    for (let i = 0; i < 15; i++) {
+                    <p>
+                        You have a way of making people feel appreciated
+                        without making a big deal about it.
+                    </p>
+                </div>
 
-        const heart = document.createElement("div");
 
-        heart.className = "heart";
-        heart.innerHTML = ["❤️","💗","💕","💖","✨"][Math.floor(Math.random()*5)];
+                <div class="mini-card">
+                    <strong>✨ Your energy</strong>
 
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.bottom = "-20px";
-        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+                    <p>
+                        There's just something about talking to you
+                        that makes ordinary moments feel different.
+                    </p>
+                </div>
 
-        document.body.appendChild(heart);
 
-        setTimeout(() => {
-            heart.remove();
-        }, 6000);
-    }
-}
+                <div class="mini-card">
+                    <strong>🌙 Simply you</strong>
 
-</script>
+                    <p>
+                        No explanation needed.
+                        You're just you, and that's worth appreciating.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Little moments -->
+        <section class="section">
+
+            <h3>Little moments I remember 🌙</h3>
+
+            <div class="timeline">
+
+
+                <div class="moment">
+
+                    <div class="moment-icon">
+                        💬
+                    </div>
+
+                    <div class="moment-content">
+
+                        <span>The beginning</span>
+
+                        <h4>The day we started talking</h4>
+
+                        <p>
+                            It's funny how something that seemed so
+                            ordinary at the time can become a moment
+                            worth remembering.
+
+                            One conversation somehow became many more. ❤️
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="moment">
+
+                    <div class="moment-icon">
+                        🚶🏽‍♂️
+                    </div>
+
+                    <div class="moment-content">
+
+                        <span>A simple walk</span>
+
+                        <h4>The day we walked together</h4>
+
+                        <p>
+                            No fancy plans. No big occasion.
+                            Just two people walking and talking.
+
+                            Somehow, those simple moments are the ones
+                            that stay in your mind.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="moment">
+
+                    <div class="moment-icon">
+                        🥔
+                    </div>
+
+                    <div class="moment-content">
+
+                        <span>And of course...</span>
+
+                        <h4>The bhajia 😂</h4>
+
+                        <p>
+                            Because apparently a few bhajias had to become
+                            part of the story too. 😂
+
+                            It's a small memory, but it's one of those
+                            random little things that makes me smile.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reminder -->
+        <section class="section">
+
+            <h3>A little reminder 💭</h3>
+
+            <div class="memory">
+
+                <p>
+                    Some people come into our lives for a reason,
+                    some for a season...
+
+                    <br><br>
+
+                    And sometimes we don't immediately know which one
+                    someone will be.
+
+                    <br><br>
+
+                    But I'm happy you're here. 🤍
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Secret message -->
+        <section class="secret">
+
+            <button onclick="revealSecret()">
+                Don't tap this 👀
+            </button>
+
+            <div class="secret-message" id="secret">
+
+                Okay... you tapped it 😂
+
+                <br><br>
+
+                Here's the part I didn't want sitting
+                in the main letter.
+
+                <br><br>
+
+                <strong>
+                    If you're ever having one of those days
+                    where everything feels a little heavy,
+                    come back here.
+                </strong>
+
+                <br><br>
+
+                Take a breath.
+
+                Smile.
+
+                Remember that you're appreciated.
+
+                <br><br>
+
+                And yes... you can blame me for putting
+                this ridiculously sentimental message here. 😂❤️
+
+            </div>
+
+        </section>
+
+
+        <!-- Ending -->
+        <section class="final">
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+            <p>
+                This page doesn't need anything fancy.
+
+                Its only purpose is to remind you that
+                you're appreciated.
+            </p>
+
+            <div class="signature">
+                — From someone who's glad you came into his life 🤍
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
 
 </body>
-  </html>
+
+</html>
